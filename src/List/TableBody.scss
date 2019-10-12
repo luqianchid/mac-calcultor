@@ -1,0 +1,57 @@
+.trade {
+    width: 1522px;
+    margin: 0 auto;    
+    .table-head {
+        background: #eeec;   
+        border-radius: 5px 5px 0 0;
+        height: 35px;
+        font-size: 0;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+        .head-item {            
+            span{
+                text-align: center;
+                width: 80px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 35px;
+                display: inline-block;
+            }    
+            .bigger {
+                width: 120px;
+            }    
+        }       
+    }
+    .table-body {
+        border-bottom: 1px solid #eee;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;    
+        .trade-item {
+            border-bottom: 1px solid #eee;
+            font-size: 0; 
+            float: left;
+            background: #fff;    
+            list-style: none;
+            height: 35px;
+            .bigger {
+                width: 120px;
+            }
+            span {
+                width: 80px;
+                display: inline-block;
+                text-align: center;
+                font-size: 12px;  
+                line-height: 35px;                          
+                a {
+                    color: #309eee;
+                    text-decoration: none;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            .date {
+                color: #309eee;
+            }                        
+        }  
+    }
+}

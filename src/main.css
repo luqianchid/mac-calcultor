@@ -1,0 +1,357 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.content .head {
+  width: 100%;
+  height: 50px;
+  background: #a3e69663;
+  border-bottom: 1px solid #a3e69682;
+  display: flex;
+  text-align: center;
+}
+.content .head .logo {
+  flex: 1;
+  text-align: left;
+  line-height: 50px;
+}
+.content .head .logo .intro {
+  padding-left: 30px;
+  margin: 0;
+  color: #44b130;
+  font-size: 14px;
+}
+.content .head .info {
+  width: 180px;
+  display: flex;
+  line-height: 50px;
+}
+.content .head .info .name,
+.content .head .info .exit {
+  width: 80px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+}
+.content .head .info .name {
+  color: #44b130;
+}
+.content .head .info .exit {
+  color: #309eee;
+}
+.content .tab-container {
+  padding-top: 30px;
+  flex: 1;
+}
+.content .tab-container .tab-nav {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+.content .tab-container .tab-nav .nav-bar {
+  height: 30px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  margin: 0 auto;
+  width: 1522px;
+  border-bottom: 1px solid #eee;
+}
+.content .tab-container .tab-nav .nav-bar .tab {
+  line-height: 30px;
+  margin: 0;
+  background: #fff;
+  font-size: 14px;
+  padding: 0 15px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.content .tab-container .tab-nav .nav-bar .active {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  color: #69b8f3;
+}
+.content .tab-container .tabpane {
+  display: none;
+  padding-top: 20px;
+}
+.content .tab-container .tabpane #calculator {
+  width: 320px;
+  height: 470px;
+  border-radius: 5px;
+  background: #242424;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+.content .tab-container .tabpane #calculator #display {
+  height: 120px;
+  position: relative;
+}
+.content .tab-container .tabpane #calculator #display .btn-grp {
+  display: flex;
+}
+.content .tab-container .tabpane #calculator #display .btn-grp .btn {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #eee;
+  margin: 4px;
+}
+.content .tab-container .tabpane #calculator #display .btn-grp .btn div {
+  opacity: 0;
+  height: 12px;
+  line-height: 13px;
+  text-align: center;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .btn-grp:hover
+  .btn:nth-child(1) {
+  background: orangered;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .btn-grp:hover
+  .btn:nth-child(1):nth-child(1)
+  div {
+  opacity: 1;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .btn-grp:hover
+  .btn:nth-child(2) {
+  background: orange;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .btn-grp:hover
+  .btn:nth-child(2):nth-child(2)
+  div {
+  opacity: 1;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .btn-grp:hover
+  .btn:nth-child(3) {
+  background: green;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .btn-grp:hover
+  .btn:nth-child(3):nth-child(3)
+  div {
+  opacity: 1;
+}
+.content .tab-container .tabpane #calculator #display .loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.content .tab-container .tabpane #calculator #display .loading div {
+  background-color: #dcdcdc;
+  width: 4px;
+  height: 35px;
+  border-radius: 2px;
+  margin: 2px;
+  animation-fill-mode: both;
+  position: absolute;
+  width: 5px;
+  height: 15px;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(1) {
+  top: 20px;
+  left: 0;
+  animation: loading 1.2s 0.12s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(2) {
+  top: 13.63636px;
+  left: 13.63636px;
+  transform: rotate(-45deg);
+  animation: loading 1.2s 0.24s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(3) {
+  top: 0;
+  left: 20px;
+  transform: rotate(90deg);
+  animation: loading 1.2s 0.36s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(4) {
+  top: -13.63636px;
+  left: 13.63636px;
+  transform: rotate(45deg);
+  animation: loading 1.2s 0.48s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(5) {
+  top: -20px;
+  left: 0;
+  animation: loading 1.2s 0.6s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(6) {
+  top: -13.63636px;
+  left: -13.63636px;
+  transform: rotate(-45deg);
+  animation: loading 1.2s 0.72s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(7) {
+  top: 0;
+  left: -20px;
+  transform: rotate(90deg);
+  animation: loading 1.2s 0.84s infinite ease-in-out;
+}
+.content
+  .tab-container
+  .tabpane
+  #calculator
+  #display
+  .loading
+  div:nth-child(8) {
+  top: 13.63636px;
+  left: -13.63636px;
+  transform: rotate(45deg);
+  animation: loading 1.2s 0.96s infinite ease-in-out;
+}
+.content .tab-container .tabpane #calculator #display #history {
+  display: none;
+}
+.content .tab-container .tabpane #calculator #display #output {
+  text-align: right;
+  height: 100px;
+  margin: 0;
+  color: #fff;
+  padding: 0 20px;
+}
+.content .tab-container .tabpane #calculator #display #output .output-value {
+  font-size: 45px;
+  font-weight: 100;
+  padding-top: 40px;
+  margin: 0;
+}
+.content .tab-container .tabpane #calculator #keyboard {
+  height: 350px;
+}
+.content .tab-container .tabpane #calculator #keyboard .command,
+.content .tab-container .tabpane #calculator #keyboard .number {
+  width: 80px;
+  height: 70px;
+  border-right: 1px solid #838383;
+  border-bottom: 1px solid #838383;
+  border-top: none;
+  border-left: none;
+  float: left;
+}
+.content .tab-container .tabpane #calculator #keyboard .command {
+  font-size: 40px;
+  font-weight: 200;
+  background: #f6872c;
+  color: #fff;
+}
+.content .tab-container .tabpane #calculator #keyboard .command:focus {
+  outline: 0;
+}
+.content .tab-container .tabpane #calculator #keyboard .command:active {
+  background: #a9a9a9;
+}
+.content .tab-container .tabpane #calculator #keyboard .command:nth-child(1),
+.content .tab-container .tabpane #calculator #keyboard .command:nth-child(2),
+.content .tab-container .tabpane #calculator #keyboard .command:nth-child(3) {
+  background: #dcdcdc;
+  font-size: 20px;
+  color: #000;
+}
+.content .tab-container .tabpane #calculator #keyboard .number {
+  background: #dcdcdc;
+  font-size: 20px;
+}
+.content .tab-container .tabpane #calculator #keyboard .number:focus {
+  outline: 0;
+}
+.content .tab-container .tabpane #calculator #keyboard .number:active {
+  background: #a9a9a9;
+}
+.content .tab-container .tabpane #calculator #keyboard button:nth-child(17) {
+  width: 160px;
+  text-align: left;
+  padding-left: 34px;
+  border-bottom: none;
+}
+.content .tab-container .tabpane #calculator #keyboard button:nth-child(18),
+.content .tab-container .tabpane #calculator #keyboard button:nth-child(19) {
+  border-bottom: none;
+}
+.content .tab-container .tabpane #calculator #keyboard button:nth-child(19) {
+  border-right: none;
+}
