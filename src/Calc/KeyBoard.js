@@ -18,7 +18,7 @@ export default class KeyBoard extends Component {
         <Button clickEvent = {this.handleClick} value="7" />
         <Button clickEvent = {this.handleClick} value="8" />
         <Button clickEvent = {this.handleClick} value="9" />             
-        <Button clickEvent = {this.handleClick} value="*" specialColor/>
+        <Button clickEvent = {this.handleClick} value="x" specialColor/>
         <Button clickEvent = {this.handleClick} value="4" />
         <Button clickEvent = {this.handleClick} value="5" />
         <Button clickEvent = {this.handleClick} value="6" />

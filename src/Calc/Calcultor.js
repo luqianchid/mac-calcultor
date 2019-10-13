@@ -10,26 +10,43 @@ export default class Calcultor extends Component {
         this.state = {
             result: '',
             next: '',
-						command: ''
+            command: '',
+            show: 'none'
         }
     }
     userClick = (btnName)=> {
-				this.setState(judge(this.state,btnName))
-				console.log(this.state)				
-		}
+        console.log(this.state)	
+        if (btnName === '=') {
+            this.showLoading()
+        }      
+        this.setState(judge(this.state,btnName))
+    }
+    reSize = (result) =>{
+        if (result.length > 10) {
+            return '20px'
+        }
+        return '45px'
+    }
+    showLoading() {
+        this.setState({show: 'block'})
+        setTimeout(() => {
+            this.setState({show: 'none'})
+        }, 1500);
+        clearTimeout()        
+    }
     render() {
         return (
             <div id="calcultor">              
-                <Display value={this.state.result || this.state.next || '0'}/>
-                <div className="loading">
-									<div></div>
-									<div></div>
-									<div></div>
-									<div></div>
-									<div></div>
-									<div></div>
-									<div></div>
-									<div></div>
+                <Display size={this.reSize(this.state.result)} value={this.state.next || this.state.result || '0'}/>
+                <div className="loading" style={{display: this.state.show}}>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
                 <KeyBoard clickBtn={this.userClick}/>
             </div>

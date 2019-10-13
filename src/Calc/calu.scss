@@ -44,87 +44,90 @@
               }
           }      
       }
-      .loading {
-          position: absolute; 
-          left:50%;
-          top:50%;
-          transform: translate(-50%, -50%);
-          display: none;
-          div {
-              background-color: #dcdcdc;
-              width: 4px;
-              height: 35px;
-              border-radius: 2px;
-              margin: 2px;                        
-              animation-fill-mode: both;
-              position: absolute;
-              width: 5px;
-              height: 15px; 
-              &:nth-child(1) {
-                  top: 20px;
-                  left: 0;
-                  animation: loading 1.2s 0.12s infinite ease-in-out; 
-              }
-              &:nth-child(2) {
-                  top: 13.63636px;
-                  left: 13.63636px;
-                  transform: rotate(-45deg);
-                  animation: loading 1.2s 0.24s infinite ease-in-out; 
-              }
-              &:nth-child(3) {
-                  top: 0;
-                  left: 20px;
-                  transform: rotate(90deg);
-                  animation: loading 1.2s 0.36s infinite ease-in-out; 
-              }
-              &:nth-child(4) {
-                  top: -13.63636px;
-                  left: 13.63636px;
-                  transform: rotate(45deg);
-                  animation: loading 1.2s 0.48s infinite ease-in-out; 
-              }
-              &:nth-child(5) {
-                  top: -20px;
-                  left: 0;
-                  animation: loading 1.2s 0.6s infinite ease-in-out; 
-              }
-              &:nth-child(6) {
-                  top: -13.63636px;
-                  left: -13.63636px;
-                  transform: rotate(-45deg);
-                  animation: loading 1.2s 0.72s infinite ease-in-out; 
-              }
-              &:nth-child(7) {
-                  top: 0;
-                  left: -20px;
-                  transform: rotate(90deg);
-                  animation: loading 1.2s 0.84s infinite ease-in-out; 
-              }
-              &:nth-child(8) {
-                  top: 13.63636px;
-                  left: -13.63636px; 
-                  transform: rotate(45deg);
-                  animation: loading 1.2s 0.96s infinite ease-in-out; 
-              }
-          }
-      }
-      #history {
-          display: none;
-      }
+       
       #output {
-          text-align: right;
+          text-align: center;
           height: 100px;
           margin: 0;
           color: #fff;
-          padding: 0 20px;
-          .output-value {
-              font-size: 45px;
+          .output-value {              
               font-weight: 100;
-              padding-top: 40px;
-              margin: 0;
+              border: none;
+              width: 300px;
+              height: 78px;
+              padding-top: 20px;
+              background: #242424;
+              color: #fff;
+              text-align: right;
+              &:focus {
+                  outline: 0;
+              }
           }
       }
   }
+  .loading {
+    position: absolute; 
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    div {
+        background-color: #fff;
+        width: 4px;
+        height: 35px;
+        border-radius: 2px;
+        margin: 2px;                        
+        animation-fill-mode: both;
+        position: absolute;
+        width: 5px;
+        height: 15px; 
+        &:nth-child(1) {
+            top: 20px;
+            left: 0;
+            animation: loading 1.2s 0.12s infinite ease-in-out; 
+        }
+        &:nth-child(2) {
+            top: 13.63636px;
+            left: 13.63636px;
+            transform: rotate(-45deg);
+            animation: loading 1.2s 0.24s infinite ease-in-out; 
+        }
+        &:nth-child(3) {
+            top: 0;
+            left: 20px;
+            transform: rotate(90deg);
+            animation: loading 1.2s 0.36s infinite ease-in-out; 
+        }
+        &:nth-child(4) {
+            top: -13.63636px;
+            left: 13.63636px;
+            transform: rotate(45deg);
+            animation: loading 1.2s 0.48s infinite ease-in-out; 
+        }
+        &:nth-child(5) {
+            top: -20px;
+            left: 0;
+            animation: loading 1.2s 0.6s infinite ease-in-out; 
+        }
+        &:nth-child(6) {
+            top: -13.63636px;
+            left: -13.63636px;
+            transform: rotate(-45deg);
+            animation: loading 1.2s 0.72s infinite ease-in-out; 
+        }
+        &:nth-child(7) {
+            top: 0;
+            left: -20px;
+            transform: rotate(90deg);
+            animation: loading 1.2s 0.84s infinite ease-in-out; 
+        }
+        &:nth-child(8) {
+            top: 13.63636px;
+            left: -13.63636px; 
+            transform: rotate(45deg);
+            animation: loading 1.2s 0.96s infinite ease-in-out; 
+        }
+    }
+} 
   #keyboard {
       height: 350px;
       .button-click {
@@ -138,7 +141,7 @@
           border-left: none;
           float: left;
           &:focus {
-              outline: 0;
+            outline: 0;
           }
           &:active {
             background: #a9a9a9;
@@ -169,3 +172,11 @@
         }
   }
 }    
+@keyframes  loading {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

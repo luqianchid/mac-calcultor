@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 export default class Display extends Component {
   static propTypes = {
-    value: PropTypes.string
+    value: PropTypes.string,
+    size: PropTypes.string // 字体大小
   }
   render() {
     return (
@@ -14,7 +15,7 @@ export default class Display extends Component {
           <div className="btn"><div>=</div></div>
         </div>         
         <div id="output">
-          <p id="output-value" className="output-value">{this.props.value}</p>
+          <input ref="output" readOnly  className="output-value"  style={{fontSize:this.props.size}} value={this.props.value}/>
         </div>
       </div>
     )
